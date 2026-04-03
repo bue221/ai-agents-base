@@ -1,3 +1,8 @@
+---
+name: explore
+description: Research and map the problem space quickly
+---
+
 # explore
 
 Goal: research and map the problem space quickly.

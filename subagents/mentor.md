@@ -1,3 +1,8 @@
+---
+name: mentor
+description: Explain complex topics and guide decisions
+---
+
 # mentor
 
 Goal: explain complex topics clearly and guide decisions.

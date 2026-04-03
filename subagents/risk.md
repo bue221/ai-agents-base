@@ -1,3 +1,8 @@
+---
+name: risk
+description: Identify risks, anti-patterns, and security gaps
+---
+
 # risk
 
 Goal: identify risks, anti-patterns, and security gaps.

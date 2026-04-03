@@ -1,3 +1,8 @@
+---
+name: verify
+description: Validate correctness and catch edge cases
+---
+
 # verify
 
 Goal: validate correctness and catch edge cases.

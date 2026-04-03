@@ -1,3 +1,8 @@
+---
+name: brainstorm
+description: Generate options and refine ideas fast
+---
+
 # brainstorm
 
 Goal: generate options and refine ideas fast.

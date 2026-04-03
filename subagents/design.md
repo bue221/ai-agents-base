@@ -1,3 +1,8 @@
+---
+name: design
+description: Propose architecture options and tradeoffs
+---
+
 # design
 
 Goal: propose architecture and tradeoffs.
