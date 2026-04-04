@@ -10,12 +10,13 @@ Validate the global agent setup, ensure all CLIs point to the base repo, and enf
 - When switching between OpenCode, Claude CLI, and Gemini CLI.
 
 ## Steps
-1) Confirm each CLI is loading the wrapper file (`opencode.md`, `claude.md`, `gemini.md`).
-2) Confirm each wrapper file references `./agents.md` as base instructions.
-3) Verify Engram is installed and enabled in every CLI where supported.
-4) Enforce global Engram storage path and document it.
-5) Confirm skills directory visibility and access.
-6) If this is a new repo or a new tech stack, optionally recommend `npx autoskills`.
+1) Confirm each CLI is correctly linked to the repo files using OS-level symbolic links (~/.gemini/GEMINI.md, ~/.claude/CLAUDE.md).
+2) If links are missing or pointing to the wrong place, provide the `ln -s` commands to fix them.
+3) Confirm each wrapper file in the repo is a symbolic link to `./agents.md`.
+4) Verify Engram is installed and enabled in every CLI where supported.
+5) Enforce global Engram storage path and document it.
+6) Confirm skills directory visibility and access.
+7) If this is a new repo or a new tech stack, optionally recommend `npx autoskills`.
 
 ## Output
 - A short status report (OK / Needs action) per CLI.
