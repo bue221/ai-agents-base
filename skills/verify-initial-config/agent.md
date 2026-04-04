@@ -12,7 +12,7 @@ Validate the global agent setup, ensure all CLIs point to the base repo, and enf
 ## Steps
 1) Confirm each CLI is correctly linked to the repo files using OS-level symbolic links (~/.gemini/GEMINI.md, ~/.claude/CLAUDE.md).
 2) If links are missing or pointing to the wrong place, provide the `ln -s` commands to fix them.
-3) Confirm each wrapper file in the repo is a symbolic link to `./agents.md`.
+3) Confirm each wrapper file in the repo is a symbolic link to `./agents.md` or an exact copy kept in sync.
 4) Verify Engram is installed and enabled in every CLI where supported.
 5) Enforce global Engram storage path and document it.
 6) Confirm skills directory visibility and access.
