@@ -1,0 +1,6 @@
+{
+  "name": "add-cli",
+  "category": "dev",
+  "description": "Investiga, planea e integra nuevos asistentes CLI (Cody, Windsurf, etc.) al sistema centralizado de ai-agents-base.",
+  "triggers": ["add cli", "integrate new ai", "support new assistant", "nuevo asistente"]
+}

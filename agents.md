@@ -1,3 +1,8 @@
+---
+description: Global AI Rules and Persona - Single Source of Truth
+globs: ["**/*"]
+alwaysApply: true
+---
 # Agent Profile (Compact)
 
 ## Engineering Standards

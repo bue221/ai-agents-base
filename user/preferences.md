@@ -1,3 +1,8 @@
+---
+description: User Coding Preferences and Styles
+globs: ["**/*"]
+alwaysApply: true
+---
 # 🛠️ Mis Preferencias Técnicas (User Preferences)
 
 > **"A mí me gusta el código así, parce."** Aquí van mis gustos personales, patrones favoritos y lo que NO quiero que la AI use.
