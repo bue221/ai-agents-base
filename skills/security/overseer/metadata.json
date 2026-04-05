@@ -1,0 +1,6 @@
+{
+  "name": "overseer",
+  "category": "security",
+  "description": "Monitoriza cambios críticos en el código y previene brechas de seguridad.",
+  "triggers": ["monitor", "security check", "overseer"]
+}

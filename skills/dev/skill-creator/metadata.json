@@ -1,0 +1,6 @@
+{
+  "name": "skill-creator",
+  "category": "dev",
+  "description": "Generador estandarizado de nuevos skills con SKILL.md y metadata.json.",
+  "triggers": ["create skill", "new skill", "scaffold skill"]
+}

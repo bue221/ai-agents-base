@@ -1,0 +1,6 @@
+{
+  "name": "create-skill",
+  "category": "dev",
+  "description": "Versión alternativa de creación de skills y prompts especializados.",
+  "triggers": ["create skill", "build ability"]
+}

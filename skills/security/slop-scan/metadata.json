@@ -1,0 +1,6 @@
+{
+  "name": "slop-scan",
+  "category": "security",
+  "description": "Escaneo de código en busca de 'slop' o patrones de código inseguros e ineficientes.",
+  "triggers": ["scan", "security audit", "slop"]
+}

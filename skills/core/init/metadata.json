@@ -1,0 +1,6 @@
+{
+  "name": "init",
+  "category": "core",
+  "description": "Inicializa el entorno de trabajo del agente y verifica configuraciones base.",
+  "triggers": ["init", "setup", "start project"]
+}

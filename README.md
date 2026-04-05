@@ -1,36 +1,45 @@
-# AI Agents Base
+# 🧠 AI Agents Base
 
-Single source of truth for OpenCode, Claude CLI, and Gemini CLI.
+> **Un solo cerebro, todos tus CLIs.** Configuración centralizada para Gemini CLI, Claude Code y OpenCode.
 
-## Key principles
-- One global `agents.md` with compact core rules (token-first).
-- CLI wrapper files reference `./agents.md` as the base instructions (symlink recommended).
-- Skills live under `skills/` and load on-demand.
-- Hooks enforce guardrails without token cost.
-- Engram is mandatory wherever supported, using a global storage path.
+Este repositorio es la fuente de la verdad para tus asistentes de IA. Olvídate de configurar la identidad, las reglas de respuesta y los skills en tres lugares diferentes. Con **AI Agents Base**, lo haces una vez y se refleja en todos lados.
 
-## Quick start
-1) Clone this repo.
-2) Point each CLI to its wrapper file:
-   - `opencode.md`
-   - `claude.md`
-   - `gemini.md`
-3) Run the `verify-initial-config` skill on first use.
+## ✨ Características
 
-## Structure
-- `agents.md`: compact core rules and personality.
-- `skills/`: reusable on-demand skills.
-- `hooks/`: zero-token guardrails (optional, CLI-dependent).
-- `subagents/`: modular subagent prompts.
-- `docs/`: workflow, templates, and conventions.
-- `patterns/`: curated prompts.
+- 🇨🇴 **Identidad Unificada:** Mentor técnico experto con tono colombiano (opcional pero recomendado mka).
+- 🚀 **Instalación en un paso:** Scripts para macOS, Linux y Windows.
+- 🛠️ **Skills Modulares:** Habilidades compartidas que tus agentes cargan bajo demanda.
+- ⚡ **Token-First:** Reglas compactas diseñadas para ahorrar contexto y ser eficientes.
 
-## Large tasks
-- Must complete `docs/spec-template.md`.
-- Must update `docs/decisions.md`.
+## 🚀 Instalación Rápida
 
-## Optional tools
-See `docs/optional-tools.md`.
+Pille, parce, es muy sencillo. Solo clone el repo y corra el instalador:
 
-## Hooks
-See `docs/hooks.md` for installation and notes.
+```bash
+git clone https://github.com/tu-usuario/ai-agents-base.git
+cd ai-agents-base
+./scripts/install.sh
+```
+
+**¿Estás en Windows?** Mka, no hay problema:
+```powershell
+.\scripts\install.ps1
+```
+
+## 📂 Estructura del Proyecto
+
+- `agents.md`: **El Cerebro.** Aquí vive la identidad, tono y reglas globales.
+- `skills/`: Habilidades específicas (ej. seguridad, testing, refactorización). **Cada skill DEBE incluir un `metadata.json`** para facilitar su descubrimiento dinámico por parte de la IA.
+
+## 🧱 Estándar de Skills
+
+Para que un skill sea válido, su carpeta debe contener:
+1. `SKILL.md`: Instrucciones detalladas.
+2. `metadata.json`: Metadatos compactos (`name`, `description`, `triggers`) que la AI lee antes de cargar toda la habilidad.
+
+¿Tiene un skill melo o una regla que ahorra mil tokens? ¡Mande el PR, parce!
+1. Lea [docs/contributing.md](docs/contributing.md).
+2. Cree su rama y proponga el cambio.
+
+---
+Hecho con ❤️ por [Tu Nombre/Usuario]

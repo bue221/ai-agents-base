@@ -1,0 +1,6 @@
+{
+  "name": "verify-initial-config",
+  "category": "core",
+  "description": "Verifica que el entorno, las rutas de configuración y las herramientas necesarias estén correctamente instaladas.",
+  "triggers": ["verify", "check config", "diagnostic"]
+}

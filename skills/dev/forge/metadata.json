@@ -1,0 +1,6 @@
+{
+  "name": "forge",
+  "category": "dev",
+  "description": "Skill para la creación rápida de componentes y lógica de negocio.",
+  "triggers": ["forge", "generate code", "scaffolding"]
+}

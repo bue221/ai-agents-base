@@ -1,0 +1,6 @@
+{
+  "name": "git-save",
+  "category": "ops",
+  "description": "Automatiza el guardado, commit y push de cambios de forma segura.",
+  "triggers": ["git save", "commit", "push", "checkpoint"]
+}
