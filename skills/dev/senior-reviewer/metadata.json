@@ -1,0 +1,6 @@
+{
+  "name": "senior-reviewer",
+  "category": "dev",
+  "description": "Revisión rigurosa de código enfocada en rendimiento, seguridad, legibilidad y el cumplimiento de user/preferences.md.",
+  "triggers": ["review", "code audit", "revisar código", "senior check", "criticize"]
+}

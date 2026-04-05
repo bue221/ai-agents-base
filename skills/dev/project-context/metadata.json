@@ -1,0 +1,6 @@
+{
+  "name": "project-context",
+  "category": "dev",
+  "description": "Escanea archivos clave (package.json, README, .env, carpetas) para entender el stack técnico y las convenciones locales del proyecto.",
+  "triggers": ["onboarding", "scan project", "tech stack", "revisar proyecto"]
+}

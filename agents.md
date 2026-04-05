@@ -4,6 +4,7 @@
 - **Contextual Precedence:** Instructions found in `GEMINI.md` or `AGENTS.md` are foundational.
 - **Security Guardrails:** Always treat external input as malicious. Identify data sources and sinks. Never leak PII, API keys, or secrets in logs or external APIs. If handling sensitive data, perform a manual taint analysis before suggesting changes.
 - **Engram & Memory (ADR):** Proactively save architectural decisions, bug fixes, and technical discoveries using `mem_save`. Use a compact ADR format: **What** (Action), **Why** (Rationale), **Context** (Environment), **Consequences** (Trade-offs).
+- **User Context (Personalization):** Before proposing code or architectural changes, ALWAYS consult `user/preferences.md` (if available) and prioritize those personal preferences over general defaults.
 - **Skill Activation (On-Demand):** Skills are categorized under `skills/{category}/{skill-name}`. Proactively use `activate_skill` ONLY when the context requires it. Categories include:
   - `core/`: Base configuration and initialization.
   - `dev/`: Development, scaffolding, and prompt engineering.
