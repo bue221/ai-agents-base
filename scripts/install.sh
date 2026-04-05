@@ -65,6 +65,34 @@ sync_cli() {
     create_link "$SUBAGENTS_DIR" "$config_dir/agents" "Carpeta de Subagentes"
 }
 
+sync_codex() {
+    echo -e "\n${YELLOW}🛠️ Sincronizando Codex (global) ...${NC}"
+
+    # Codex puede leer instrucciones por proyecto (AGENTS.md en el repo).
+    # Igual dejamos un link global por conveniencia y para herramientas auxiliares.
+    create_link "$AGENTS_FILE" "$HOME/.codex/AGENTS.md" "Instrucciones (AGENTS.md)"
+
+    # Skills: Codex usa $CODEX_HOME/skills (default: ~/.codex/skills).
+    # No reemplazamos la carpeta completa (Codex ya mantiene .system). En vez de eso,
+    # creamos symlinks por-skill con prefijo aiab- para evitar colisiones.
+    mkdir -p "$HOME/.codex/skills"
+
+    local meta
+    for meta in "$SKILLS_DIR"/*/*/metadata.json; do
+        # Si no hay matches, bash deja el glob literal; evitamos eso.
+        [ -f "$meta" ] || continue
+
+        local skill_dir
+        local skill_name
+        local category
+        skill_dir="$(dirname "$meta")"
+        skill_name="$(basename "$skill_dir")"
+        category="$(basename "$(dirname "$skill_dir")")"
+
+        create_link "$skill_dir" "$HOME/.codex/skills/aiab-${category}-${skill_name}" "Skill (aiab-${category}-${skill_name})"
+    done
+}
+
 # 1. Gemini CLI (~/.gemini/)
 sync_cli "Gemini CLI" "$HOME/.gemini" "GEMINI.md"
 
@@ -73,6 +101,9 @@ sync_cli "Claude Code" "$HOME/.claude" "CLAUDE.md"
 
 # 3. OpenCode (~/.opencode/)
 sync_cli "OpenCode" "$HOME/.opencode" "AGENTS.md"
+
+# 4. Codex (~/.codex/)
+sync_codex
 
 echo -e "\n${GREEN}✨ ¡TODO MELO, PARCE! ✨${NC}"
 echo -e "${BLUE}Sus tres CLIs ahora comparten el mismo Cerebro, Skills y Subagentes.${NC}"

@@ -1,6 +1,6 @@
 # 🧠 AI Agents Base
 
-> **Un solo cerebro, todos tus CLIs.** Configuración centralizada para Gemini CLI, Claude Code y OpenCode.
+> **Un solo cerebro, todos tus CLIs.** Configuración centralizada para Gemini CLI, Claude Code, OpenCode y Codex.
 
 Este repositorio es la fuente de la verdad para tus asistentes de IA. Olvídate de configurar la identidad, las reglas de respuesta y los skills en tres lugares diferentes. Con **AI Agents Base**, lo haces una vez y se refleja en todos lados.
 
@@ -24,6 +24,15 @@ cd ai-agents-base
 **¿Estás en Windows?** Mka, no hay problema:
 ```powershell
 .\scripts\install.ps1
+```
+
+## 🧩 Codex (nota)
+
+- **Global:** `./scripts/install.sh` enlaza tus skills a `~/.codex/skills` sin tocar las skills del sistema de Codex.
+- **Por proyecto:** Codex suele leer instrucciones desde `./AGENTS.md` en el repo. Para enlazarlo a tu cerebro central:
+
+```bash
+./scripts/install-codex-project.sh
 ```
 
 ## 📂 Estructura del Proyecto

@@ -43,3 +43,21 @@ alwaysApply: true
 - Engram: mandatory where supported; use global storage; run `verify-initial-config` after setup changes.
 - Questions: ask a single precise question only when blocked; include a recommended default.
 - Safety: never fabricate facts; call out risks, edge cases, assumptions.
+
+## Skills (shared)
+- Skills live in `skills/<category>/<skill>/` and include `metadata.json` + `SKILL.md`.
+- When a request matches a skill trigger, load and follow that skill's `SKILL.md` instructions.
+- If the runtime supports a native skill loader, use it; otherwise read the skill files directly from the linked `skills/` folder.
+
+## Skills catalog
+- `core/init`: Inicializa el entorno de trabajo del agente y verifica configuraciones base.
+- `core/verify-initial-config`: Verifica que el entorno, las rutas de configuracion y las herramientas necesarias esten correctamente instaladas.
+- `dev/add-cli`: Investiga, planea e integra nuevos asistentes CLI (Cody, Windsurf, etc.) al sistema centralizado de ai-agents-base.
+- `dev/create-skill`: Version alternativa de creacion de skills y prompts especializados.
+- `dev/forge`: Skill para la creacion rapida de componentes y logica de negocio.
+- `dev/project-context`: Escanea archivos clave (package.json, README, .env, carpetas) para entender el stack tecnico y las convenciones locales del proyecto.
+- `dev/senior-reviewer`: Revision rigurosa de codigo enfocada en rendimiento, seguridad, legibilidad y el cumplimiento de user/preferences.md.
+- `dev/skill-creator`: Generador estandarizado de nuevos skills con SKILL.md y metadata.json.
+- `ops/git-save`: Automatiza el guardado, commit y push de cambios de forma segura.
+- `security/overseer`: Monitoriza cambios criticos en el codigo y previene brechas de seguridad.
+- `security/slop-scan`: Escaneo de codigo en busca de 'slop' o patrones de codigo inseguros e ineficientes.
